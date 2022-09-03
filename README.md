@@ -1,5 +1,6 @@
 # Python_Exercise04
-# Output console
+'''
+Output console
 3
 6
 9
@@ -359,3 +360,4 @@ How many points to generate for calculating pi value: 1000000
 Value of pi is:  3.139976
 
 Process finished with exit code 0
+'''
