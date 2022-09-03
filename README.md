@@ -1,6 +1,5 @@
-# Python_Exercise04
+# Python_Exercise04 Output console
 '''
-Output console
 3
 6
 9
