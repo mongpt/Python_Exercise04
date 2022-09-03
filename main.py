@@ -7,16 +7,18 @@ while n <= 1000:
     n += 3
 
 # Phase 2: Write a program that converts inches to centimeters until the user inputs a negative value. Then the program ends.
-num_in = float(input("Input any number (negative number to exit): "))
-while num_in >= 0:
-    num_cm = num_in * 2.54
-    print(num_in, "in =", num_cm, "cm")
-    num_in = float(input("Input any number (negative number to exit): "))
+getInput = input("Input any number (negative number to exit): ")
+numIn = float(getInput)
+while numIn >= 0:
+    numCm = numIn * 2.54
+    print(getInput, "in =", numCm, "cm")
+    getInput = input("Input any number (negative number to exit): ")
+    numIn = float(getInput)
 
 # Phase 3: Write a program that asks the user to enter numbers until they enter an empty string to quit.
 # Finally, the program prints out the smallest and largest number from the numbers it received.
 numMax = 0
-num = input("Enter a number (Blank to exit): ")
+num = input("Enter a number (Enter blank to exit): ")
 if num != "":
     numMin = float(num)
 else:
@@ -27,6 +29,12 @@ while num != "":
     elif float(num) > numMax:
         numMax = float(num)
     num = input("Enter a number (Enter blank to exit): ")
+numMinStr = str(numMin)
+numMaxStr = str(numMax)
+if numMinStr[len(numMinStr)-1:] == "0":
+    numMin = int(numMin)
+if numMaxStr[len(numMaxStr)-1:] == "0":
+    numMax = int(numMax)
 print("The smallest number is: ", numMin)
 print("The largest number is: ", numMax)
 
@@ -81,6 +89,7 @@ Write a program that asks the user how many random points to generate, and then 
 value of pi using the method explained above. At the end, the program prints out the approximation of pi to the user.
 (Notice that it is easy to test if a point falls inside circle A by testing if it fulfills the inequation x^2+y^2<1.).
 """
+
 import random
 count = 0
 insidePoints = 0
